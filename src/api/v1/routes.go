@@ -1,6 +1,7 @@
 package v1
 
 import (
+	"awesome-trade/src/examples"
 	"awesome-trade/src/internal/handler"
 
 	"github.com/gin-gonic/gin"
@@ -54,4 +55,8 @@ func SetupRoutes(r *gin.Engine) {
 			})
 		}
 	}
+
+	// 添加Gin使用示例路由
+	examples.SetupExampleRoutes(r)
+	examples.SetupMiddlewareExamples(r)
 }
